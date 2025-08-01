@@ -1,0 +1,21 @@
+footer {
+  background-color: #111827;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 80px;
+  text-align: center;
+  width: 100%;
+}
+.footer-container {
+  margin: auto;
+}
+.footer-note {
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+.footer-warning {
+  color: #6b7280;
+  font-size: 14px;
+  max-width: 600px;
+  margin: auto;
+}

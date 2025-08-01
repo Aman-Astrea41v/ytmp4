@@ -1,0 +1,44 @@
+/* Header Styles */
+header {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #e11d48, #4f46e5);
+  color: white;
+  text-align: center;
+}
+
+.header-container {
+  margin: auto;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.logo-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.logo-icon span {
+  font-size: 28px;
+}
+
+.logo-text {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header-description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin: auto;
+  line-height: 1.6;
+}
