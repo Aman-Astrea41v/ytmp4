@@ -30,7 +30,7 @@ app.post('/getVideoInfo', async  (req,res) => {
       res.json({data:data.formats, title:data.title});
     }
     catch(err){
-      res.status(404).json({'message':'Not a Valid Link',Error:err})
+      res.status(404).json({message:err.message})
     }
 }) 
 
@@ -45,8 +45,7 @@ app.post('/getDownloaded', async (req, res) => {
     }
   }
   catch(err){
-    console.error(err);
-    return res.status(404).json({success: false, message: "Something went wrong.Try downloading other video format."});
+    return res.status(404).json({success: false, message: "Something went wrong.Try downloading other video format.",Error:err.message});
   }
 });
 

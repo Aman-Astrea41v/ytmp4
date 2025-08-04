@@ -27,20 +27,20 @@ const Converter = () => {
                 const thumbnailLink = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
                 setThumbnailURL(thumbnailLink);
             } else {
-                Error("Invalid YouTube URL")
+                Error("Invalid YouTube URL");
                 return null;
             }
         }
         catch(err){
+            // console.error(err);
             Error("Some Error Occured.Try Refreshing and Download Again.");
-            console.error(err);
         }
     }
 
     const getVideoInfo = async () => {
         if (url == '') {
             Error('Empty URL.Please paste Youtube Link.')
-            return
+            return null;
         }
         else {
             try{
@@ -60,12 +60,14 @@ const Converter = () => {
                     return parsed;
                 }
                 else{
-                    Error(parsed.message || "Some error occured")
+                    // console.log(parsed);
+                    Error(parsed?.message || "Some error occured");
+                    return null;
                 }
             }
             catch(err){
-                console.error("Info 59: "+err);
-                Error(err.Error || "Some error occured")
+                // console.error("Info 59: "+err);
+                Error("Some Error Occured")
             }
         }
     }
@@ -89,12 +91,13 @@ const Converter = () => {
                 return parsed;
             }
             else{
-                Error(parsed.message || 'Some error occured')
+                Error(parsed?.message || 'Some Error occured')
                 return  null
             }
         }   
         catch(err){
-            Error(err.Error || 'Some error occured');
+            // console.error(err);
+            Error('Some Error occured');
         }
     }
 
