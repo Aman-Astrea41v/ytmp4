@@ -1,0 +1,24 @@
+.step-ctn{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 5px;
+}
+
+.heading-steps{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.steps{
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.steps:hover{
+    font-size: 17px;
+    background-color: #eeeeee;
+    
+}

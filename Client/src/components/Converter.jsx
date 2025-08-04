@@ -4,6 +4,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { TailSpin, FallingLines } from "react-loader-spinner";
 import { io } from "socket.io-client";
 import { Success, Error } from "./toast";
+import StepsToDownload from "./StepsToDownload";
 
 const socket = io(process.env.REACT_APP_BACKEND_URL);
 
@@ -178,6 +179,11 @@ const Converter = () => {
                 </div>
                 {/* <p className='errorURL'>{infoErr}</p> */}
             </div>
+
+            {
+                !infoLoading && !infoData && 
+                <StepsToDownload />
+            }
 
             <div className="infoContainer">
 
