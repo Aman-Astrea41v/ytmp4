@@ -4,7 +4,7 @@ function initSocket(server) {
   const { Server } = require("socket.io");
   io = new Server(server,{
     cors: {
-      origin: "https://yt-mp4.vercel.app/",
+      origin: process.env.FRONTEND_URL,
       methods: ["GET", "POST"],
     },
   });

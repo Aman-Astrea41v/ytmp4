@@ -5,6 +5,7 @@ const cors = require('cors');
 const cron = require('node-cron')
 const fs = require('fs');
 const http = require('http');
+require('dotenv').config();
 const PORT = process.env.PORT || 7624;
 const { downloadYouTubeVideo, getVideoInfo } = require("./index.js");
 const { initSocket } = require('./Initialized Package/socket.js');
