@@ -31,6 +31,7 @@ app.post('/getVideoInfo', async  (req,res) => {
       res.json({data:data.formats, title:data.title});
     }
     catch(err){
+      console.log(err);
       res.status(404).json({message:err.message})
     }
 }) 
