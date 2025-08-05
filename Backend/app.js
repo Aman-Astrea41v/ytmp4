@@ -21,7 +21,7 @@ app.use(express.json());
 
 // Home route
 app.get('/', (req, res) => {
-  res.status(200).json({"status":"Working"});
+  res.status(200).json({"status":"Live"});
 });
 
 app.post('/getVideoInfo', async  (req,res) => {
@@ -50,7 +50,7 @@ app.post('/getDownloaded', async (req, res) => {
 });
 
 // Cron Job to delete videos after 10 minutes.
-cron.schedule('0 0 * * *', () => {
+cron.schedule('*/10 * * * *', () => {
     const folderPath = path.join(__dirname,'downloads');
     fs.readdir(folderPath, (err, files) => {
       if(err){
